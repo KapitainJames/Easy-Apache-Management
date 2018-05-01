@@ -17,4 +17,6 @@ echo "Please Wait..."
 
 #This line is broken. Insert start command for apache:
 
-sudo /var/www/apache2 $option
+sudo /etc/init.d/apache2 $option
+echo $option server
+read l2
