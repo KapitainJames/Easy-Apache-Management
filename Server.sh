@@ -1,9 +1,12 @@
 #!/bin/bash
 setterm -foreground green
 clear
-echo "Apache Server 1.2.0"
-echo "Welcome Captain-Cozmos!"
+echo "Apache Server Manager 1.2.2"
+echo "Designed by Captain-Cozmos"
 echo "Press enter to begin..."
+while :
+do
+setterm -foreground green
 read l
 clear
 echo "Options:"
@@ -16,8 +19,14 @@ clear
 echo "Applying $option to server..."
 echo "Please Wait..."
 
-#This line is broken. Insert start command for apache:
+#do option indicated by user to Apache server
 
 sudo /etc/init.d/apache2 $option
 echo $option server
+echo ""
+setterm -foreground blue
+echo "DONE! Press enter twice to start over."
+echo "Press Ctrl+C to interrupt" 
 read l2
+clear
+done
