@@ -1,9 +1,19 @@
 #!/bin/bash
-setterm -foreground green
 clear
-echo "Apache Server Manager 1.2.2"
+echo "Apache Server Manager 1.3.0"
 echo "Designed by Captain-Cozmos"
 echo "Press enter to begin..."
+read l3
+#Package installer
+		echo "Starting Apache Updater..."
+		apt-get install apache2
+	echo "Done!"
+		echo "Installing core-utils..."
+		apt-get install coreutils
+	echo "Done!"
+# Switch to blue for instructions
+setterm -foreground blue
+echo "Press enter to continue..."
 while :
 do
 setterm -foreground green
